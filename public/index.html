@@ -18,32 +18,27 @@
 
     <div class="banner">
             <img src="images/tenor.gif" class="static">
-    <span class="signin">
-        <button class="signUpbtn">Sign In</button>
-    </span>
+        <span class="signin">
+            <button class="signUpbtn">Sign In</button>
+        </span>
     </div>
-        <div class="Intro">
-            <div class="title"><h1>Offbrand Yelp</h1></div>
-            <div class="zipcode">
+
+
+    <div class="Intro">
+        <div class="title"><h1>Offbrand Yelp</h1></div>
+        <div class="zipcode">
             <span id="enter">Enter your zip code:</span></br>
-                <input type="text" name="zip" value="10003" placeholder="Enter your zipcode!" id='zipHolder'>
+                <input type="text" name="zip" placeholder="Enter your zipcode!" id='zipHolder'>
                 <button class="zipbutton">Go!</button>
             </div>
         </div>
-
+    </div>
 
     <div id="padding">
         <div id="dummy_text">
         <h1>How to Yelp</h1>
         Finding new restaurants is even easier than eating!
         </div>
-<!--         <div class="icons">
-            <ul>
-                <li id="find">search</li>
-                <li>Explore</li>
-                <li>Order</li>
-            </ul>
-        </div> -->
     </div>
 
 
@@ -51,15 +46,16 @@
     <div class="hidden">
         <section id="popUp" class="modal" style="">
             <h1 id="popup_name"></h1>
-            <p>Phone: <span id="popup_phone"></span></p>
-            Address:
-            <span id="popup_address"></span><br />
-            <span id="popup_city"></span><br />
-            <span id="popup_state"></span><br />
-            <span id="popup_zip"></span><br /><br />
-
-            Average Review: <p id="popup_review"></p>
+            <b>Phone:</b> <span id="popup_phone"></span></br>
+            <b>Address:</b>
+            <span id="popup_address"></span>,<br>
+            <span id="popup_city"></span>,
+            <span id="popup_state"></span>,
+            <span id="popup_zip"></span></br>
+            <b>Average Rating:</b> <span id="popup_review"></span><b> stars</b>
             <div id='linkHold'></div>
+
+
         </section>
     </div>
 <!--loading popup-->

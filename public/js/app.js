@@ -55,30 +55,26 @@ $(document).ready(function() {
                     text : "Yelp Page",
                     target: '_blank'
                 });
-                $('#linkHold').append(newLink);
+
+
+            $('#linkHold').append(newLink);
 
             $('#popup_name').html(restaurant.name);
             $('#popup_phone').html(restaurant.display_phone);
-            $('#popup_address').html(restaurant.location.address);
+            $('#popup_address').html(restaurant.location.address1);
             $('#popup_city').html(restaurant.location.city);
             $('#popup_state').html(restaurant.location.state);
-            $('#popup_zip').html(restaurant.location.zip_code);                // $('#popup_review').html(restaurant.rating);
-
-
-
-            // var yelpUrl = $(this).attr('href');
-            //  $('#popUp', 'a').attr('href', yelpUrl);
+            $('#popup_zip').html(restaurant.location.zip_code);
+            $('#popup_review').html(restaurant.rating);               // $('#popup_review').html(restaurant.rating);
+            // $('#distance').html(restaurant.distance);
 
 
 
             $('#popUp').modal();
                 console.log("this is a test!", index)
             });
-// rendering modal
-
-            //  $('.zipbutton').on("click", function() {
-            //     $(".loading").show("#loader").modal();
-            // });
+// hide html modal
+        $("#popUp").hide();
 
         },
         restaurantList: [],
