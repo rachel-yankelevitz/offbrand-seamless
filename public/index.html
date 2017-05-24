@@ -3,48 +3,70 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>offbrand Seamless</title>
+    <title>offbrand Yelp!</title>
     <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/jquery.modal.css" type="text/css" media="screen" />
+  <!--   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header>
-        <section class="Intro">
-            <div class="title"><h1>Offbrand Seamless</h1></div>
-            <br>
-            <div class="spacer">
-            </div>
+
+    <div class="loader hidden"></div>
+
+    <div class="banner">
+            <img src="images/tenor.gif" class="static">
+    <span class="signin">
+        <button class="signUpbtn">Sign In</button>
+    </span>
+    </div>
+        <div class="Intro">
+            <div class="title"><h1>Offbrand Yelp</h1></div>
             <div class="zipcode">
+            <span id="enter">Enter your zip code:</span></br>
                 <input type="text" name="zip" value="10003" placeholder="Enter your zipcode!" id='zipHolder'>
                 <button class="zipbutton">Go!</button>
             </div>
-        </section>
-    </header>
+        </div>
 
-    <section id="padding">
-    </section>
+
+    <div id="padding">
+        <div id="dummy_text">
+        <h1>How to Yelp</h1>
+        Finding new restaurants is even easier than eating!
+        </div>
+<!--         <div class="icons">
+            <ul>
+                <li id="find">search</li>
+                <li>Explore</li>
+                <li>Order</li>
+            </ul>
+        </div> -->
+    </div>
 
 
     <!-- PopUp-->
-     <div id="popUp" class="loader hidden">
-        <a href="#" class="closePopUp hidden">x</a>
-        <div class="modal">
-            <h1>
-                <!-- Heading for clicked article. -->
-            </h1>
-            <p>
-                <!-- Blurb for clicked article. -->
-            </p>
-            <!-- Don't forget to set the href attribute of the anchor tag. -->
-            <a href="#" class="popUpAction" target="_blank">Restaurant URL</a>
-        </div>
-    </div>
+    <div class="hidden">
+        <section id="popUp" class="modal" style="">
+            <h1 id="popup_name"></h1>
+            <p>Phone: <span id="popup_phone"></span></p>
+            Address:
+            <span id="popup_address"></span><br />
+            <span id="popup_city"></span><br />
+            <span id="popup_state"></span><br />
+            <span id="popup_zip"></span><br /><br />
 
+            Average Review: <p id="popup_review"></p>
+            <div id='linkHold'></div>
+        </section>
+    </div>
+<!--loading popup-->
+
+<!--closing the loader popup-->
     <script src="js/vendor/jquery-3.0.0.min.js"></script>
+    <script src="js/vendor/jquery.modal.js"></script>
     <script src="js/vendor/underscore-min.js"></script>
     <script src="js/app.js"></script>
 </body>
